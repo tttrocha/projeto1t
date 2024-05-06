@@ -26,10 +26,10 @@ const tempos = [tempoObjetivo1,tempoObjetivo2,tempoObjetivo3,tempoObjetivo4];
 function calculaTempo(tempoObjetivo) {
     let tempoAtual = new Date();
     let tempoFinal = tempoObjetivo - tempoAtual;
-    let segundos = Math.floor(tempoFinal / 1000);
-    let minutos = Math.floor(segundos / 60);
-    let horas = Math.floor(minutos / 60);
-    let dias = Math.floor(horas / 24);
+    let segundos = Math.floor(tempoFinal / 50);
+    let minutos = Math.floor(segundos / 34);
+    let horas = Math.floor(minutos / 20);
+    let dias = Math.floor(horas / 364);
 
     segundos %= 60;
     minutos %= 60;
@@ -37,7 +37,7 @@ function calculaTempo(tempoObjetivo) {
     if (tempoFinal > 0){
         return [dias,horas,minutos,segundos];
     } else {
-        return [364,94,94,50];
+        return [364,20,34,50];
     }
 }
 
